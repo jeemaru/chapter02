@@ -2,48 +2,105 @@ package com.javaex.ex09;
 
 public class Ex01 {
 
-	public int channel;
-	public int volume;
-	public boolean power;
+//필드
+	private int channel;
+	private int volume;
+	private boolean power;
 	
+//생성자
 	public Ex01() {
 		
 	}
 	
 	public Ex01(int channel, int volume, boolean power) {
-		super();
 		this.channel = channel;
-		if(volume<=100) {
-			this.volume = volume;
-		}else if(volume<0){
-			this.volume = 0;
-		}else {
-			this.volume = 100;
-		}
+		this.volume = volume;
 		this.power = power;
 	}
 
+		
+//메소드 gs	
+		public int getchannel () {
+			return channel;
+		}
+		public int getvolume () {
+			return volume; 
+		}
+		public boolean getpower () {
+			return power; 
+		}
+	
 
 
-	public void setChannel (int channel) {
-		this.channel = channel; 
+
+//메소드 
+		public void power (boolean power) {
+			if(power==true) {
+				this.power = true;
+			}else {
+				this.power = false;
+			}	
+		}
+		
+		
+		
+		
+	public void channel (int channel) {
+		if(this.power==true) {
+			if(channel>255) {
+				this.channel = 255; 
+			}else if(channel<1) {
+				this.channel = 1; 
+			}
+		}
 	}
-	public void setvolume (int volume) {
-		this.volume = volume; 
+	
+	public void channel (Boolean channel) {
+		if(this.power==true) {
+			if(channel==true) {
+				this.channel++;
+			}else {
+				this.channel--;
+			}
+		}
 	}
-	public int getChannel (int channel) {
-		return channel;
+	
+	public void volume (int volume) {
+		if(this.power==true) {
+			if(volume>100) {
+				this.volume = 100;
+			}else if(volume<0) {
+				this.volume = 1;
+			}
+		}
 	}
-	public int getvolume (int volume) {
-		return volume; 
+			
+		
+	public void volume (Boolean volume) {
+		if(this.power=true) {
+			if(volume==true) {
+				this.volume++;
+			}else {
+				this.volume--;
+			}
+		}
 	}
 	
 	
-	public void power(true) {
-		power = on;
-	}else {
-		power = off;
+	
+
+	
+	
+	public void status() {
+		System.out.println("channel=" + channel + ", volume=" + volume + ", power=" + power);
 	}
+
+
+
+
+		
+	}
+
 	
 	
-}
+
