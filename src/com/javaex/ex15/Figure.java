@@ -13,20 +13,20 @@ public class Figure {
 		//면색:보라, 선색: 검정, 반지름 3 원
 		
 		Ractangle[] ractangle = new Ractangle[2];
-		Circle[] circle = new Circle[2];
-		Triangle[] triangle = new Triangle[2];
-		
 		Ractangle rat1 = new Ractangle("빨강", "검정", 4, 4);
 		Ractangle rat2 = new Ractangle("주황", "검정", 5, 5);
-		Triangle tri1 = new Triangle("빨강", "검정", 4, 4);
-		Triangle tri2 = new Triangle("보라", "검정", 10, 10);
-		Circle cir1 = new Circle("보라", "빨강", 3);
-		Circle cir2 = new Circle("보라", "검정", 3);
-		
 		ractangle[0]=rat1;
 		ractangle[1]=rat2;
+		
+		Triangle[] triangle = new Triangle[2];
+		Triangle tri1 = new Triangle("빨강", "검정", 4, 4);
+		Triangle tri2 = new Triangle("보라", "검정", 10, 10);
 		triangle[0]=tri1;
 		triangle[1]=tri2;
+		
+		Circle[] circle = new Circle[2];
+		Circle cir1 = new Circle("보라", "빨강", 3);
+		Circle cir2 = new Circle("보라", "검정", 3);
 		circle[0]=cir1;
 		circle[1]=cir2;
 		
